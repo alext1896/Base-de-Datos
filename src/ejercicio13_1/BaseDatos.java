@@ -13,8 +13,8 @@ public class BaseDatos {
 				+ "MARCA VARCHAR (40) NOT NULL,"
 				+ "MODELO VARCHAR (40) NOT NULL,"
 				+ "COLOR VARCHAR (40) NOT NULL,"
-				+ "ANNO NUMBER (4),"
-				+ "PRECIO NUMBER (6),"
+				+ "ANNO INTEGER (4),"
+				+ "PRECIO INTEGER (6),"
 				+ "PRIMARY KEY (MATRICULA))";
 		
 		Statement operacion = null;

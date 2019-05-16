@@ -10,12 +10,14 @@ public class MainEjercicio13_1 {
 		
 		try {
 			//1.- Crear conexion
-			Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "C##ALEX", "oracle");
+			//ORACLE Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "C##ALEX", "oracle");
+			
+			Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/eclipse", "root", "oracle");
 			//3.- Ejecutar SQL
 			BaseDatos miBaseDatos = new BaseDatos();
 			//miBaseDatos.CreaTablaCoches(conexion, "coches");
 			
-			miBaseDatos.listarDatos(conexion);
+			//miBaseDatos.listarDatos(conexion);
 			
 			//miBaseDatos.borrarDatos(conexion, "COCHES", "ABC123");
 			
