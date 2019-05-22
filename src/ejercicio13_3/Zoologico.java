@@ -181,13 +181,13 @@ public class Zoologico {
 		
 	}
 	
-	public void insertarDatos (Connection conexion, String nombreTabla, String nombre, int edad, String color, String tipoComida, int cantidadComida, String cuidador, String caractEspeciales, String ubicacion) {
+	public void insertarDatos (Connection conexion,  String nombre, int edad, String color, String tipoComida, int cantidadComida, String cuidador, byte veterinario, String caractEspeciales, String ubicacion) {
 		id = idSiguiente;
 		Statement operacion = null;
 		
-		String insert = "INSERT INTO "+ nombreTabla + " (NOMBRE, EDAD, COLOR, TIPOCOMIDA, CANTIDAD_COMIDA, CUIDADOR, CARACTERISTICA_ESPECIALES, UBICACION, ID ) VALUES "
-				+ "(" + "'"+nombre + "'"+  ", " +  "'"+edad + "'"+ ", " +  "'" + color +  "'" +", " +  "'"+ tipoComida +  "'" + ", " +  "'" + cantidadComida + "'" + ", " +  "'" + cuidador +  "'"+ 
-				", " +  "'" + caractEspeciales +  "'"+ ", " +  "'" + ubicacion +  "'"+ ", " +  "'" + id +  "'" +")";
+		String insert = "INSERT INTO ZOOLOGICO (NOMBRE, EDAD, COLOR, TIPOCOMIDA, CANTIDAD_COMIDA, CUIDADOR, VETERINARIO, CARACTERISTICA_ESPECIALES, UBICACION, ID ) VALUES "
+				+ "(" + "'"+nombre + "'"+  ", " +  "'"+edad + "'"+ ", " +  "'" + color +  "'" +", " +  "'"+ tipoComida +  "'" + ", " +  "'" + cantidadComida + "'" + ", " +  "'" + cuidador +  "',"+  "'" + veterinario +  "'"
+				+", "  +  "'" + caractEspeciales +  "'"+ ", " +  "'" + ubicacion +  "'"+ ", " +  "'" + id +  "'" +")";
 		
 		try {
 			operacion = conexion.createStatement();			
